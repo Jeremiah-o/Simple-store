@@ -5,7 +5,7 @@ import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between max-h-5 max-w-[80vw] mx-auto'>
+    <div className='flex justify-between max-h-5 max-w-[80vw] mx-auto mb-20'>
         <Link to={"/"}>
           <span>
             <h1 className=' text-3xl font-bold bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent'>PRODUCT STORE 🛒</h1>

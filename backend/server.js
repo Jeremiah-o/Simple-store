@@ -2,11 +2,17 @@ import express from 'express'
 import { connectDB } from './config/db.js'
 import dotenv from 'dotenv'
 import productRoutes from './routes/product.route.js'
-
+import cors from 'cors'
 dotenv.config()
 
 const app = express()
 const port=process.env.PORT || 3000
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.json())
 app.use("/api/products",productRoutes)
