@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL:"https://simple-store-emad.onrender.com/",
+  baseURL: import.meta.env.MODE === "development"? "http://localhost:3000/api":"https://simple-store-emad.onrender.com/",
 });
 
 export default api;
