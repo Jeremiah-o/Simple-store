@@ -10,7 +10,7 @@ const app = express()
 const port=process.env.PORT || 3000
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://simple-store-emad.onrender.com" ]
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
@@ -33,8 +33,3 @@ connectDB().then(() => {
   });
 });
 
-
-
-//Q2xoKF6o2sAcZ2zz
-
-// mongodb+srv://omondijeremia2005_db_user:Q2xoKF6o2sAcZ2zz@cluster0.zzdpy82.mongodb.net/?appName=Cluster0
